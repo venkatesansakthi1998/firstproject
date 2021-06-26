@@ -1,0 +1,82 @@
+
+
+
+<form [formGroup]="userForm" (ngSubmit)="onsubmit()">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name" formControlName="firstname" >
+        <span class="help-block"  *ngIf="!userForm.get('firstname').valid && userForm.get('firstname').touched"> please enter valid firstname</span>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name" formControlName="lastname">
+        <span class="help-block"  *ngIf="!userForm.get('lastname').valid && userForm.get('lastname').touched"> please enter valid lastname</span>
+       
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="text"   class="form-control" placeholder="Ex -abc@gamil.com" formControlName="email">
+            <span class="help-block"  *ngIf="!userForm.get('email').valid && userForm.get('email').touched"> please enter valid Email</span>
+        </div>
+        
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <input type="text"   class="form-control" placeholder="PhoneNumber" formControlName="phonenumber">
+            <span class="help-block"  *ngIf="!userForm.get('phonenumber').valid && userForm.get('phonenumber').touched"> please enter valid phonenumber</span>
+        </div>
+        
+    </div>
+
+    <br>
+
+    <div class="row">
+       
+        <div class="col">
+          <input class="form-control" type="number" placeholder="Age"  id="example-number-input">
+        </div>
+   </div>
+   <br>
+     
+   
+   <br>
+   
+  <button type="submit"  class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+
+  
+
+   <button class="btn btn-info" style="margin-left: 50px;" type="button" (click)="resetValue()">Reset Value</button> 
+
+
+   
+</form>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <label class="custom-file">
+    <input type="file" id="file" class="custom-file-input">
+    <span class="custom-file-control"></span>
+  </label> -->
